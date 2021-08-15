@@ -1,0 +1,193 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{english-theorems}
+\RequirePackage[standard,thmmarks]{ntheorem}
+\RequirePackage{amsmath}
+\RequirePackage{cleveref}
+	
+	\newtheorem{otheorem}{Theorem}
+	\newtheorem{oexample}{Example}
+	\makeatletter%
+	\@ifclassloaded{article}%
+	{
+		
+		\renewtheorem{otheorem}{Theorem}
+		
+		\renewtheorem{oexample}{Example}
+	}%
+	{
+		\@ifclassloaded{book}
+		{
+			\renewtheorem{otheorem}{Theorem}[chapter]
+			\renewtheorem{oexample}{Example}[chapter]
+		}
+		{
+			\renewtheorem{otheorem}{Theorem}	
+			\renewtheorem{oexample}{Example}
+		}
+	}%
+	\makeatother%
+	
+	
+	\theoremseparator{.}
+	\theoremsymbol{}
+	\theorembodyfont{\itshape}
+	\theoremheaderfont{\normalfont\bfseries}
+	\theoremstyle{plain}
+	\renewtheorem{theorem}[otheorem]{Theorem}
+	\renewtheorem{corollary}[otheorem]{Corollary}
+	\renewtheorem{lemma}[otheorem]{Lemma}
+	\renewtheorem{proposition}[otheorem]{Proposition}
+	
+	
+	\theoremseparator{.}
+	\theoremsymbol{}
+	\theorembodyfont{\upshape}
+	\theoremheaderfont{\normalfont\bfseries}
+	\theoremstyle{plain}
+	\renewtheorem{remark}{Remark}
+	\renewtheorem{example}[oexample]{Example}
+	
+	\theoremseparator{:}
+	\theoremsymbol{}
+	\theorembodyfont{\upshape}
+	\theoremheaderfont{\normalfont\bfseries}
+	\theoremstyle{nonumberplain}
+	\renewtheorem{definition}{Definition}
+	\newtheorem{note}{Note}
+	
+	\theoremseparator{.}
+	\theoremsymbol{{\ensuremath{\blacksquare}}}
+	\theorembodyfont{\upshape}
+	\theoremheaderfont{\itshape}
+	\theoremstyle{nonumberplain}
+	\renewtheorem{proof}{Proof}
+	\theoremsymbol{{\ensuremath{\square}}}
+	\newtheorem{prooflemma}{Proof}
+	
+	
+	\theoremseparator{.}
+	\theoremsymbol{}
+	\theoremheaderfont{\normalfont\bfseries}
+	\theoremstyle{plain}
+	\theorembodyfont{\upshape}
+	\newtheorem{results}{Results}
+	
+	
+	\Crefname{theorem}{Theorem}{Theorems}
+	\Crefname{example}{Example}{Examples}
+	\Crefname{corollary}{Corollary}{Corollaries}
+	\Crefname{lemma}{Lemma}{Lemmata}
+	\Crefname{proposition}{Propostion}{Propositions}
+	\Crefname{remark}{Remark}{Remarks}
+	\Crefname{definition}{Definition}{Definitions}
+	\Crefname{note}{Note}{Notes}
+	\Crefname{equation}{Equation}{Equations}
+	
+%	
+%
+%
+%
+%\newtheorem{otheorem}{Theorem}
+%\newtheorem{oexample}{Example}
+%\makeatletter%
+%\@ifclassloaded{article}%
+%{
+%	
+%	\renewtheorem{otheorem}{Theorem}
+%	
+%	\renewtheorem{oexample}{Example}
+%}%
+%{
+%	\@ifclassloaded{book}
+%	{
+%		\renewtheorem{otheorem}{Theorem}[chapter]
+%		\renewtheorem{oexample}{Example}[chapter]
+%	}
+%	{
+%		\renewtheorem{otheorem}{Theorem}	
+%		\renewtheorem{oexample}{Example}
+%	}
+%}%
+%\makeatother%
+%
+%
+%%\theoremseparator{.}
+%%\theoremsymbol{}
+%%\theorembodyfont{\itshape}
+%%\theoremheaderfont{\normalfont\bfseries}
+%%\theoremstyle{plain}
+%\theoremstyle{plain}
+%\newtheorem{theorem}[otheorem]{Theorem}
+%\newtheorem{corollary}[otheorem]{Corollary}
+%\newtheorem{lemma}[otheorem]{Lemma}
+%\newtheorem{proposition}[otheorem]{Proposition}
+%
+%
+%%\theoremseparator{.}
+%%\theoremsymbol{}
+%%\theorembodyfont{\upshape}
+%%\theoremheaderfont{\normalfont\bfseries}
+%%\theoremstyle{plain}
+%\theoremstyle{remark}
+%\newtheorem{remark}{Remark}
+%\newtheorem{example}[oexample]{Example}
+%
+%%\theoremseparator{:}
+%%\theoremsymbol{}
+%%\theorembodyfont{\upshape}
+%%\theoremheaderfont{\normalfont\bfseries}
+%%\theoremstyle{nonumberplain}
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}
+%\newtheorem{note}{Note}
+%
+%%\theoremseparator{.}
+%%\theoremsymbol{{\ensuremath{\blacksquare}}}
+%%\theorembodyfont{\upshape}
+%%\theoremheaderfont{\itshape}
+%%\theoremstyle{nonumberplain}
+%%\newtheorem{proof}{Proof}
+%%\theoremsymbol{{\ensuremath{\square}}}
+%\newtheorem{prooflemma}{Proof}
+%
+%
+%\DeclareOption{persian}{
+%	
+%	\theoremseparator{.}
+%	\theoremsymbol{}
+%	\theorembodyfont{\itshape}
+%	\theoremheaderfont{\normalfont\bfseries}
+%	\theoremstyle{plain}
+%	\renewtheorem{theorem}{قضیه}[otheorem]
+%	\renewtheorem{corollary}[otheorem]{نتیجه}
+%	\renewtheorem{lemma}[otheorem]{لم}
+%	\renewtheorem{proposition}[otheorem]{گزاره}
+%	
+%	
+%	\theoremseparator{.}
+%	\theoremsymbol{}
+%	\theorembodyfont{\upshape}
+%	\theoremheaderfont{\normalfont\bfseries}
+%	\theoremstyle{plain}
+%	\renewtheorem{remark}{ملاحضه}
+%	\renewtheorem{example}[oexample]{مثال}
+%	
+%	\theoremseparator{:}
+%	\theoremsymbol{}
+%	\theorembodyfont{\upshape}
+%	\theoremheaderfont{\normalfont\bfseries}
+%	\theoremstyle{nonumberplain}
+%	\renewtheorem{definition}{تعریف}
+%	\renewtheorem{note}{یادداشت}
+%	
+%	\theoremseparator{.}
+%	\theoremsymbol{{\ensuremath{\blacksquare}}}
+%	\theorembodyfont{\upshape}
+%	\theoremheaderfont{\itshape}
+%	\theoremstyle{nonumberplain}
+%	\renewtheorem{proof}{برهان}
+%	\theoremsymbol{{\ensuremath{\square}}}
+%	\renewtheorem{prooflemma}{برهان}
+%}
+%\DeclareOption*{\PackageWarning{theorems}{Unknown ‘\CurrentOption’}}
+%\ProcessOptions\relax

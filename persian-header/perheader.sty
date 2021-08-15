@@ -1,0 +1,67 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{perheader}
+
+%page settings
+
+\RequirePackage{graphicx,tabularx}
+\RequirePackage{array}
+\RequirePackage{multicol}
+\RequirePackage{multirow}
+\RequirePackage{xspace}
+\RequirePackage{intcalc}
+%\newenvironment{changemargin}[2]{%
+%	\begin{list}{}{%
+%			\setlength{\topsep}{0pt}%
+%			\setlength{\leftmargin}{#1}%
+%			\setlength{\rightmargin}{#2}%
+%			\setlength{\listparindent}{\parindent}%
+%			\setlength{\itemindent}{\parindent}%
+%			\setlength{\parsep}{\parskip}%
+%		}%
+%		\item[]}{\end{list}}
+%\RequirePackage{xepersian}
+
+%\newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
+
+\newcolumntype{L}{>{\centering\arraybackslash \hsize=0.8\hsize}X}
+\newcolumntype{M}{>{\centering\arraybackslash \hsize=0.6\hsize}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+\newcommand{\heading}[7]
+{
+	%set paging
+	\begingroup
+	\setlength{\tabcolsep}{10pt} % Default value: 6pt
+	\renewcommand{\arraystretch}{1.5} % Default value: 1
+	\begin{table}
+		\begin{tabularx}{\linewidth}{ R  M  L }	
+
+			 \huge #1 & & \multirow{2}{*}{\includegraphics[width=5em]{sharif-logo.png}} \\ [2ex]
+			 \large #4 & &  \\ [0.5ex] 
+			 \large #3 & &  #2 \\ [0.3em]\hline 
+			#5 &\large \textbf{#7}  & #6 \\ \hline	
+		\end{tabularx}
+%		\begin{tabularx}{\linewidth}{>{\raggedleft\arraybackslash}X | >{\centering\arraybackslash}X  |>{\centering\arraybackslash}X }
+%				#5 &\large \textbf{#7}  & #6 \\ \hline	
+%		\end{tabularx}
+	\end{table}
+	\endgroup
+}
+\newcommand{\handoutFormat}[8]{
+	\newcounter{year}
+	\setcounter{year}{#4}
+	\stepcounter{year}
+	\setcounter{year}{\intcalcMod{\value{year}}{100}}
+	\heading
+	{#1}{#8}{مدرس: #2}{نیم‌سال #3
+		#4\lr{-}\ifnum\value{year}<10 0\fi\arabic{year}}
+	{نام و نام‌خانوادگی: #5}{شماره دانشجویی: #6}{#7}
+}
+
+\newcommand{\mathHandout}[7]{
+	\handoutFormat{#1}{#2}{#3}{#4}{#5}{#6}{#7}{دانشکده علوم ریاضی}
+}
+
+\newcommand{\ceHandout}[7]{
+	\handoutFormat{#1}{#2}{#3}{#4}{#5}{#6}{#7}{دانشکده مهندسی کامپیوتر}
+}
