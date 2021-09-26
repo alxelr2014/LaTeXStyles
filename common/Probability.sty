@@ -1,0 +1,48 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{common}
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{Letters}
+\RequirePackage{bbold}
+\RequirePackage{xparse}
+
+
+
+\newcommand*{\Probability}{\ensuremath{\mathbb{P}}}
+\newcommand*{\prob}[1]{\ensuremath{\func{\Probability}{#1}}}
+\newcommand*{\condProb}[2] {\ensuremath{\prob{#1 \; \middle| \; #2}}}
+\newcommand*{\Expected}{\ensuremath{\mathbb{E}}}
+\DeclareMathOperator*{\Variance}{Var}
+\DeclareMathOperator*{\Covariance}{Cov}
+
+
+\NewDocumentCommand{\expected}{om}{%
+\IfNoValueTF{#1}
+{\ensuremath{\squareFunc{\Expected}{#2}}}
+{\ensuremath{\squareFunc{\Expected_{#1}}{#2}}}}%
+
+\NewDocumentCommand{\variance}{om}{%
+\IfNoValueTF{#1}
+{\ensuremath{\squareFunc{\Variance}{#2}}}
+{\ensuremath{\squareFunc{\Variance_{#1}}{#2}}}}%
+
+\NewDocumentCommand{\covariance}{om}{%
+\IfNoValueTF{#1}
+{\ensuremath{\squareFunc{\Covariance}{#2}}}
+{\ensuremath{\squareFunc{\Covariance_{#1}}{#2}}}}
+
+
+\newcommand*{\condExp}[3][]{\ensuremath{\expected[#1]{#2 \; \middle| \; #3}}}
+\newcommand*{\condCov}[3][]{\ensuremath{\covariance[#1]{#2 \; \middle| \; #3}}}
+\newcommand*{\condVar}[3][]{\ensuremath{\variance[#1]{#2 \; \middle| \; #3}}}
+\DeclareMathOperator*{\StandardDeviation}{sd}
+\newcommand*{\stdev}[1]{\ensuremath{\func{sd}{#1}}}
+\DeclareMathOperator*{\Bernoulli}{Bernoulli}
+\DeclareMathOperator*{\Binomial}{Binomial}
+\DeclareMathOperator*{\Poisson}{Poisson}
+\DeclareMathOperator*{\Pascal}{Pascal}
+\DeclareMathOperator*{\NormalDist}{N}
+\DeclareMathOperator{\betaDist}{B}
+\DeclareMathOperator{\Bias}{Bias}
+\DeclareMathOperator*{\HyperGeometric}{Hypergeometric}

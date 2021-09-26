@@ -5,56 +5,12 @@
 \RequirePackage{amssymb}
 \RequirePackage{bbold}
 \RequirePackage{xparse}
+\RequirePackage{Letters}
+\RequirePacakge{Notation}
+\RequirePackage{Probability}
 
 
-	%text
-	\newcommand*{\cardinalST}{\mathrm{st}}
-	\newcommand*{\cardinalND}{\mathrm{nd}}
-	\newcommand*{\cardinalRD}{\mathrm{rd}}
-	\newcommand*{\cardinalTH}{\mathrm{th}}
-	\newcommand*{\suchThat}{\mathrm{s.t.}}
 
-	%intervals
-	\newcommand*{\clcl}[2]{\ensuremath{\, \left[ #1, #2 \right] \,}}
-	\newcommand*{\clop}[2]{\ensuremath{\, \left[ #1, #2 \right[ \,}}
-	\newcommand*{\opcl}[2]{\ensuremath{\, \left] #1, #2 \right] \,}}
-	\newcommand*{\opop}[2]{\ensuremath{\, \left] #1, #2 \right[ \,}}
-	\newcommand*{\pair}[2]{\ensuremath{\, \left( #1, #2 \right) \,}}
-
-	% \makeatletter
-	% \def\set{\@ifnextchar[{\@dummySet}{\@normalSet}} 
-	% \def\@dummySet[#1]#2 {\left\{#1 \, \middle| \, #2\right\}}
-	% \def\@normalSet#1{\left\{#1 \right\}}
-	% \makeatother
-
-	\NewDocumentCommand{\set}{om}{%
-  \IfNoValueTF{#1}
-    {\ensuremath{\left\{#2 \right\}}}
-    {\ensuremath{\left\{#1 \, \middle| \, #2\right\}}}%
-}
-	
-	
-	%functions
-	\newcommand*{\func}[2]{\ensuremath{#1 \! \left( #2 \right) }}
-	\newcommand*{\squareFunc}[2]{\ensuremath{#1 \! \left[ #2 \right] }}
-	\newcommand*{\operatorFunc}[2]{\ensuremath{\left( #1  \right) \! \left( #2 \right) }}
-
-
-	
-	%\newcommand{\subFunc}[3]{\ensuremath{#1_{#2} \! \left( #3 \right) }}
-	%\newcommand{\supFunc}[3]{\ensuremath{#1^{#2} \! \left( #3 \right) }}
-	%\newcommand{\subsupFunc}[3]{\ensuremath{#1^{#2}_{#3} \! \left( #4 \right) }}
-	
-	
-	\newcommand*{\abs}[1][\; \cdot \;]{\ensuremath{\left\lvert #1 \right\rvert}}
-	\newcommand*{\norm}[1][\; \cdot \;]{\ensuremath{\left\lVert #1 \right\rVert}}
-	
-	\DeclarePairedDelimiter{\ceilp}{\lceil}{\rceil}
-	\DeclarePairedDelimiter{\floorp}{\lfloor}{\rfloor}
-	\DeclarePairedDelimiter{\angleBracketp}{\langle}{\rangle}
-	\newcommand{\floor}[1]{\ensuremath{\floorp*{#1}}}
-	\newcommand{\ceil}[1]{\ensuremath{\ceilp*{#1}}}
-	\newcommand{\angleBracket}[1]{\ensuremath{\angleBracketp*{#1}}}
 	
 	%operators
 	\DeclareMathOperator{\diam}{diam}
@@ -70,12 +26,27 @@
 	\newcommand*{\Expected}{\ensuremath{\mathbb{E}}}
 	\DeclareMathOperator*{\Variance}{Var}
 	\DeclareMathOperator*{\Covariance}{Cov}
-	\newcommand*{\variance}[1]{\ensuremath{\squareFunc{\Variance}{#1}}}
-	\newcommand*{\covariance}[1]{\ensuremath{\squareFunc{\Covariance}{#1}}}
-	\newcommand*{\expected}[1]{\ensuremath{\squareFunc{\Expected}{#1}}}
-	\newcommand*{\condExp}[2]{\ensuremath{\expected}{#1 \; \middle| \; #2}}
-	\newcommand*{\condCov}[2]{\ensuremath{\covariance}{#1 \; \middle| \; #2}}
-	\newcommand*{\condVar}[2]{\ensuremath{\variance}{#1 \; \middle| \; #2}}
+
+
+	\NewDocumentCommand{\expected}{om}{%
+	\IfNoValueTF{#1}
+	{\ensuremath{\squareFunc{\Expected}{#2}}}
+	{\ensuremath{\squareFunc{\Expected_{#1}}{#2}}}}%
+
+ 	\NewDocumentCommand{\variance}{om}{%
+  	\IfNoValueTF{#1}
+	{\ensuremath{\squareFunc{\Variance}{#2}}}
+	{\ensuremath{\squareFunc{\Variance_{#1}}{#2}}}}%
+
+	\NewDocumentCommand{\covariance}{om}{%
+	\IfNoValueTF{#1}
+	{\ensuremath{\squareFunc{\Covariance}{#2}}}
+	{\ensuremath{\squareFunc{\Covariance_{#1}}{#2}}}}
+
+
+	\newcommand*{\condExp}[3][]{\ensuremath{\expected[#1]{#2 \; \middle| \; #3}}}
+	\newcommand*{\condCov}[3][]{\ensuremath{\covariance[#1]{#2 \; \middle| \; #3}}}
+	\newcommand*{\condVar}[3][]{\ensuremath{\variance[#1]{#2 \; \middle| \; #3}}}
 	\DeclareMathOperator*{\StandardDeviation}{sd}
 	\newcommand*{\stdev}[1]{\ensuremath{\func{sd}{#1}}}
 	\DeclareMathOperator*{\Bernoulli}{Bernoulli}
@@ -84,6 +55,7 @@
 	\DeclareMathOperator*{\Pascal}{Pascal}
 	\DeclareMathOperator*{\NormalDist}{N}
 	\DeclareMathOperator{\betaDist}{B}
+	\DeclareMathOperator{\Bias}{Bias}
 	\DeclareMathOperator*{\HyperGeometric}{Hypergeometric}
 
 	%geometry
