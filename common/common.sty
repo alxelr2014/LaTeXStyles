@@ -3,142 +3,123 @@
 
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
-\RequirePackage{bbold}
+\RequirePackage{mathtools}
+%\RequirePackage{bbold}
 \RequirePackage{xparse}
-\RequirePackage{Letters}
-\RequirePacakge{Notation}
-\RequirePackage{Probability}
 
 
 
-	
-	%operators
-	\DeclareMathOperator{\diam}{diam}
-	\DeclareMathOperator{\interior}{int}
-	\DeclareMathOperator{\closure}{cl}
-	\DeclareMathOperator*{\vspan}{span}
-	\DeclareMathOperator*{\Image}{Im}
 
-	%probability
-	\newcommand*{\Probability}{\ensuremath{\mathbb{P}}}
-	\newcommand*{\prob}[1]{\ensuremath{\func{\Probability}{#1}}}
-	\newcommand*{\condProb}[2] {\ensuremath{\prob{#1 \; \middle| \; #2}}}
-	\newcommand*{\Expected}{\ensuremath{\mathbb{E}}}
-	\DeclareMathOperator*{\Variance}{Var}
-	\DeclareMathOperator*{\Covariance}{Cov}
+\input{Letters.tex}
+\input{Notation.tex}
+\input{Probability.tex}
+
+\newcommand{\definedAs}{\ensuremath{:=}}
 
 
-	\NewDocumentCommand{\expected}{om}{%
-	\IfNoValueTF{#1}
-	{\ensuremath{\squareFunc{\Expected}{#2}}}
-	{\ensuremath{\squareFunc{\Expected_{#1}}{#2}}}}%
-
- 	\NewDocumentCommand{\variance}{om}{%
-  	\IfNoValueTF{#1}
-	{\ensuremath{\squareFunc{\Variance}{#2}}}
-	{\ensuremath{\squareFunc{\Variance_{#1}}{#2}}}}%
-
-	\NewDocumentCommand{\covariance}{om}{%
-	\IfNoValueTF{#1}
-	{\ensuremath{\squareFunc{\Covariance}{#2}}}
-	{\ensuremath{\squareFunc{\Covariance_{#1}}{#2}}}}
+%operators
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\interior}{int}
+\DeclareMathOperator{\closure}{cl}
+\DeclareMathOperator*{\vspan}{span}
+\DeclareMathOperator*{\Image}{Im}
+\DeclareMathOperator*{\id}{id}
 
 
-	\newcommand*{\condExp}[3][]{\ensuremath{\expected[#1]{#2 \; \middle| \; #3}}}
-	\newcommand*{\condCov}[3][]{\ensuremath{\covariance[#1]{#2 \; \middle| \; #3}}}
-	\newcommand*{\condVar}[3][]{\ensuremath{\variance[#1]{#2 \; \middle| \; #3}}}
-	\DeclareMathOperator*{\StandardDeviation}{sd}
-	\newcommand*{\stdev}[1]{\ensuremath{\func{sd}{#1}}}
-	\DeclareMathOperator*{\Bernoulli}{Bernoulli}
-	\DeclareMathOperator*{\Binomial}{Binomial}
-	\DeclareMathOperator*{\Poisson}{Poisson}
-	\DeclareMathOperator*{\Pascal}{Pascal}
-	\DeclareMathOperator*{\NormalDist}{N}
-	\DeclareMathOperator{\betaDist}{B}
-	\DeclareMathOperator{\Bias}{Bias}
-	\DeclareMathOperator*{\HyperGeometric}{Hypergeometric}
+%geometry
+\newcommand*{\dang}{\measuredangle} %% Directed angle
+\newcommand*{\ray}[1]{\overrightarrow{#1}} 
+\newcommand*{\seg}[1]{\overline{#1}}
+\newcommand*{\arc}[1]{\wideparen{#1}}
 
-	%geometry
-	\newcommand*{\dang}{\measuredangle} %% Directed angle
-	\newcommand*{\ray}[1]{\overrightarrow{#1}} 
-	\newcommand*{\seg}[1]{\overline{#1}}
-	\newcommand*{\arc}[1]{\wideparen{#1}}
-	
-	%sets
-	\newcommand*{\Reals}{\ensuremath{\mathbb{R}}}
-	\newcommand*{\Rationals}{\ensuremath{\mathbb{Q}}}
-	\newcommand*{\Irrationals}{\ensuremath{\mathbb{Q}^c}}
-	\newcommand*{\Naturals}{\ensuremath{\mathbb{N}}}
-	\newcommand*{\Integers}{\ensuremath{\mathbb{Z}}}
-	\newcommand*{\Complex}{\ensuremath{\mathbb{C}}}
-	
-	
-	%algebra
-	\newcommand*{\Field}{\ensuremath{\mathbb{F}}}
-	\newcommand*{\DSZero}{\ensuremath{\mathbb{0}}}
-	\newcommand*{\DSOne}{\ensuremath{\mathbb{1}}}
-	\newcommand*{\FieldPolynomial}[2][K]{\ensuremath{\squareFunc{#1}{#2}}}
-	\newcommand*{\FieldFormalSeries}[2][K]{\ensuremath{#1 \! \left[ \left[ #2 \right] \right] }}
-	
-	
-	%analysis
-	\newcommand*{\metricSpace}[2]{\ensuremath{\left(#1,#2\right)}}
-	\newcommand*{\normedSpace}[2]{\ensuremath{\left(#1,#2\right)}}
-	\newcommand*{\CalB}{\ensuremath{\mathcal{B}}}
-	\newcommand*{\CalL}{\ensuremath{\mathcal{L}}}
-	\newcommand*{\CalC}{\ensuremath{\mathcal{C}}}
-	\DeclareMathOperator*{\GL}{GL}
-	\makeatletter
-	\DeclareMathOperator*{\@DiffOperator}{D}
-	\DeclareMathOperator*{\@diffOperator}{d}
-	\newcommand{\DiffOperator}{\ensuremath{\@DiffOperator}\!}
-	\newcommand{\diffOperator}{\ensuremath{\@diffOperator}\!}
-	\newcommand{\ODiff}[2]{\ensuremath{\frac{\diffOperator  #1}{\diffOperator #2}}}
-	\newcommand{\PDiffOperator}{\ensuremath{\partial}}
-	\newcommand{\PDiff}[2]{\ensuremath{\frac{\PDiffOperator  #1}{\PDiffOperator #2}}}
-	\makeatother
-	\DeclareMathOperator*{\argmax}{argmax}
-	\DeclareMathOperator*{\argmin}{argmin}
-	
+%sets
+\newcommand*{\Reals}{\ensuremath{\mathbb{R}}}
+\newcommand*{\Rationals}{\ensuremath{\mathbb{Q}}}
+\newcommand*{\Irrationals}{\ensuremath{\mathbb{Q}^c}}
+\newcommand*{\Naturals}{\ensuremath{\mathbb{N}}}
+\newcommand*{\Integers}{\ensuremath{\mathbb{Z}}}
+\newcommand*{\Complex}{\ensuremath{\mathbb{C}}}
+\newcommand*{\TimeDomain}{\bbT}
 
 
-	%linear algebra
-	\newcommand*{\Matrices}[3][\Field]{\ensuremath{\func{\mathcal{M}_{#2 \times #3}}{#1}}}
-	\newcommand*{\SquareMatrices}[2][\Field]{\ensuremath{\func{\mathcal{M}_{#2}}{#1}}}
-	\newcommand*{\IdentityMatrix}{\mathbb{I}}
 
-	\newenvironment{amatrix}[2]{
-		\left[\begin{array}{@{}*{#1}{c}|!{\hspace{1ex} }@{}*{#2}{c}}
-			}{%
-		\end{array}\right]
-		}
-	%}	
-  	\DeclareMathOperator*{\colSpace}{colsp}
-  	\DeclareMathOperator*{\rowSpace}{rowsp}
-	\DeclareMathOperator*{\rank}{rank}
-	\DeclareMathOperator*{\nullity}{null}
-	\DeclareMathOperator*{\image}{im}
-	\DeclareMathOperator*{\eigenSpace}{eigenspace}
-	\DeclareMathOperator*{\algmult}{algmult}
-	\DeclareMathOperator*{\trace}{tr}
+%algebra
+\newcommand*{\Field}{\ensuremath{\mathbb{F}}}
+\newcommand*{\DSZero}{\ensuremath{\mathbb{0}}}
+\newcommand*{\DSOne}{\ensuremath{\mathbb{1}}}
+\newcommand*{\FieldPolynomial}[2][K]{\ensuremath{\squareFunc{#1}{#2}}}
+\newcommand*{\FieldFormalSeries}[2][K]{\ensuremath{#1 \! \left[ \left[ #2 \right] \right] }}
 
-	  
+
+%analysis
+\newcommand*{\metricSpace}[2]{\ensuremath{\left(#1,#2\right)}}
+\newcommand*{\normedSpace}[2]{\ensuremath{\left(#1,#2\right)}}
+\newcommand*{\CalB}{\ensuremath{\mathcal{B}}}
+\newcommand*{\CalL}{\ensuremath{\mathcal{L}}}
+\newcommand*{\CalC}{\ensuremath{\mathcal{C}}}
+\DeclareMathOperator*{\GL}{GL}
+\makeatletter
+\DeclareMathOperator*{\@DiffOperator}{D}
+\DeclareMathOperator*{\@diffOperator}{d}
+\newcommand{\DiffOperator}{\ensuremath{\@DiffOperator}\!}
+\newcommand{\diffOperator}{\ensuremath{\@diffOperator}\!}
+\newcommand{\ODiff}[2]{\ensuremath{\frac{\diffOperator  #1}{\diffOperator #2}}}
+\newcommand{\PDiffOperator}{\ensuremath{\partial}}
+\newcommand{\PDiff}[2]{\ensuremath{\frac{\PDiffOperator  #1}{\PDiffOperator #2}}}
+\makeatother
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+
+
+
+%linear algebra
+\newcommand*{\Matrices}[3][\Field]{\ensuremath{\func{\mathcal{M}_{#2 \times #3}}{#1}}}
+\newcommand*{\SquareMatrices}[2][\Field]{\ensuremath{\func{\mathcal{M}_{#2}}{#1}}}
+\newcommand*{\IdentityMatrix}{\mathbb{I}}
+
+\newenvironment{amatrix}[2]{
+	\left[\begin{array}{@{}*{#1}{c}|!{\hspace{1ex} }@{}*{#2}{c}}
+		}{%
+	\end{array}\right]
+	}
+%}	
+\DeclareMathOperator*{\colSpace}{colsp}
+\DeclareMathOperator*{\rowSpace}{rowsp}
+\DeclareMathOperator*{\rank}{rank}
+\DeclareMathOperator*{\nullity}{null}
+\DeclareMathOperator*{\image}{im}
+\DeclareMathOperator*{\eigenSpace}{eigenspace}
+\DeclareMathOperator*{\algmult}{algmult}
+\DeclareMathOperator*{\trace}{tr}
 
 	
-	%logic
-	\newcommand*{\xor}{\ensuremath{\oplus}}
 
 
-	%algorithms
-	\newcommand{\bigO}[1]{\ensuremath{\func{O}{#1}}}
-	\newcommand{\bigOmega}[1]{\ensuremath{\func{\Omega}{#1}}}
-	\newcommand{\bigTheta}[1]{\ensuremath{\func{\Theta}{#1}}}
-	\newcommand{\littleO}[1]{\ensuremath{\func{o}{#1}}}
-	\newcommand{\littleOmega}[1]{\ensuremath{\func{\omega}{#1}}}
+%logic
+\newcommand*{\xor}{\ensuremath{\oplus}}
 
 
-	%Machine learing 
-	\newcommand*{\CalH}{\ensuremath{\mathcal{H}}}
-	\newcommand*{\CalE}{\ensuremath{\mathcal{E}}}
-	\newcommand*{\CalD}{\ensuremath{\mathcal{D}}}
-	\DeclareMathOperator*{\sign}{sign}
+%algorithms
+\newcommand{\bigO}[1]{\ensuremath{\func{O}{#1}}}
+\newcommand{\bigOmega}[1]{\ensuremath{\func{\Omega}{#1}}}
+\newcommand{\bigTheta}[1]{\ensuremath{\func{\Theta}{#1}}}
+\newcommand{\littleO}[1]{\ensuremath{\func{o}{#1}}}
+\newcommand{\littleOmega}[1]{\ensuremath{\func{\omega}{#1}}}
+
+
+%Machine learing 
+\newcommand*{\CalH}{\ensuremath{\mathcal{H}}}
+\newcommand*{\CalE}{\ensuremath{\mathcal{E}}}
+\newcommand*{\CalD}{\ensuremath{\mathcal{D}}}
+\DeclareMathOperator*{\sign}{sign}
+
+%Cryptography
+\DeclareMathOperator{\Gen}{Gen} 
+\DeclareMathOperator{\Enc}{Enc}
+\DeclareMathOperator{\Dec}{Dec}
+\newcommand*{\Messages}{\calM}
+\newcommand*{\Keys}{\calK}
+\newcommand*{\Ciphers}{\calC}
+\newcommand*{\but}{\perp}
+\newcommand*{\Adversary}{\calA}
+\DeclareMathOperator{\PrivK}{PrivK}

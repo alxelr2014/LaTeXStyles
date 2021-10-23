@@ -1,14 +1,3 @@
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{common}
-
-\RequirePackage{amsmath}
-\RequirePackage{amssymb}
-\RequirePackage{Letters}
-\RequirePackage{bbold}
-\RequirePackage{xparse}
-
-
-
 \newcommand*{\Probability}{\ensuremath{\mathbb{P}}}
 \newcommand*{\prob}[1]{\ensuremath{\func{\Probability}{#1}}}
 \newcommand*{\condProb}[2] {\ensuremath{\prob{#1 \; \middle| \; #2}}}
@@ -40,9 +29,11 @@
 \newcommand*{\stdev}[1]{\ensuremath{\func{sd}{#1}}}
 \DeclareMathOperator*{\Bernoulli}{Bernoulli}
 \DeclareMathOperator*{\Binomial}{Binomial}
+\DeclareMathOperator*{\Uniform}{Unif}
 \DeclareMathOperator*{\Poisson}{Poisson}
 \DeclareMathOperator*{\Pascal}{Pascal}
 \DeclareMathOperator*{\NormalDist}{N}
 \DeclareMathOperator{\betaDist}{B}
 \DeclareMathOperator{\Bias}{Bias}
 \DeclareMathOperator*{\HyperGeometric}{Hypergeometric}
+\DeclareMathOperator*{\almosure}{a.s.}

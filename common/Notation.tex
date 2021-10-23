@@ -1,16 +1,8 @@
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{Notation}
-
-\RequirePackage{amsmath}
-\RequirePackage{amssymb}
-\RequirePackage{mathtools}
-\RequirePackage{xparse}
-
 %intervals
-\newcommand*{\clcl}[2]{\ensuremath{\, \left[ #1, #2 \right] \,}}
-\newcommand*{\clop}[2]{\ensuremath{\, \left[ #1, #2 \right[ \,}}
-\newcommand*{\opcl}[2]{\ensuremath{\, \left] #1, #2 \right] \,}}
-\newcommand*{\opop}[2]{\ensuremath{\, \left] #1, #2 \right[ \,}}
+\DeclarePairedDelimiterX{\clcl}[2]{[}{]}{#1 , #2}
+\DeclarePairedDelimiterX{\clop}[2]{[}{[}{#1 , #2}
+\DeclarePairedDelimiterX{\opcl}[2]{]}{]}{#1 , #2}
+\DeclarePairedDelimiterX{\opop}[2]{]}{[}{#1 , #2}
 
 %pairs
 \DeclarePairedDelimiter{\vertp}{\lvert}{\rvert}
@@ -24,7 +16,11 @@
 
 \NewDocumentCommand{\DeclareTripledDelimiter}{O{*}mmmmm}{%
 	\makeatletter
-	\DeclarePairedDelimiterX{\@tempDelim}[2]{#2}{#4}{\ensuremath{##1 \, \delimsize#3 \, \mathopen{}##2}}
+	\ifcsname @tempDelim \endcsname%
+	{}
+  	\else%
+	  \DeclarePairedDelimiterX{\@tempDelim}[2]{#2}{#4}{\ensuremath{##1 \, \delimsize#3 \, \mathopen{}##2}}
+  	\fi%
 	\expandafter \csname @tempDelim \endcsname #1{#5}{#6}
 	\makeatother	
 }
@@ -70,6 +66,15 @@
 
 
 %functions
-\newcommand*{\func}[2]{\ensuremath{#1 \! \left( #2 \right) }} %needs to know the font
-\newcommand*{\squareFunc}[2]{\ensuremath{#1 \! \left[ #2 \right] }}
-\newcommand*{\operatorFunc}[2]{\ensuremath{\left( #1  \right) \! \left( #2 \right) }}
+\NewDocumentCommand{\func}{O{*}mm}
+{
+	\ensuremath{#2 \expandafter \csname bracketp \endcsname #1{#3}}
+}
+\NewDocumentCommand{\squareFunc}{O{*}mm}
+{
+	\ensuremath{#2 \expandafter \csname squarep \endcsname #1{#3}}
+}
+\NewDocumentCommand{\operatorFunc}{O{*}mm}
+{
+	\ensuremath{ \expandafter \csname bracketp \endcsname #1{#2} \expandafter \csname bracketp \endcsname #1{#3}}
+}
