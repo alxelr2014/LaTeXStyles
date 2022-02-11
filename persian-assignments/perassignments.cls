@@ -134,11 +134,11 @@ footskip=0.5in]{geometry}
 
 
 %Set digit math
-\ExplSyntaxOn
-\cs_set_eq:NN
-\etex_iffontchar:D
-\tex_iffontchar:D
-\ExplSyntaxOff
+%\ExplSyntaxOn
+%\cs_set_eq:NN
+%\etex_iffontchar:D
+%\tex_iffontchar:D
+%\ExplSyntaxOff
 
 \endinput
 

@@ -12,10 +12,12 @@
 
 \input{Letters.tex}
 \input{Notation.tex}
+\input{Cryptography.tex}
 \input{Probability.tex}
 
 \newcommand{\definedAs}{\ensuremath{:=}}
 
+\DeclareMathOperator*{\Res}{Res}
 
 %operators
 \DeclareMathOperator{\diam}{diam}
@@ -74,7 +76,7 @@
 
 %linear algebra
 \newcommand*{\Matrices}[3][\Field]{\ensuremath{\func{\mathcal{M}_{#2 \times #3}}{#1}}}
-\newcommand*{\SquareMatrices}[2][\Field]{\ensuremath{\func{\mathcal{M}_{#2}}{#1}}}
+\newcommand*{\squareMatrices}[2][\Field]{\ensuremath{\func{\mathcal{M}_{#2}}{#1}}}
 \newcommand*{\IdentityMatrix}{\mathbb{I}}
 
 \newenvironment{amatrix}[2]{
@@ -108,18 +110,13 @@
 
 
 %Machine learing 
-\newcommand*{\CalH}{\ensuremath{\mathcal{H}}}
-\newcommand*{\CalE}{\ensuremath{\mathcal{E}}}
-\newcommand*{\CalD}{\ensuremath{\mathcal{D}}}
 \DeclareMathOperator*{\sign}{sign}
+\DeclareMathOperator*{\average}{average}
+\DeclareMathOperator*{\VCdim}{VCdim}
+\DeclareMathOperator{\ord}{ord}
 
-%Cryptography
-\DeclareMathOperator{\Gen}{Gen} 
-\DeclareMathOperator{\Enc}{Enc}
-\DeclareMathOperator{\Dec}{Dec}
-\newcommand*{\Messages}{\calM}
-\newcommand*{\Keys}{\calK}
-\newcommand*{\Ciphers}{\calC}
-\newcommand*{\but}{\perp}
-\newcommand*{\Adversary}{\calA}
-\DeclareMathOperator{\PrivK}{PrivK}
+
+
+%transformations 
+\newcommand*{\Fourier}[1]{\ensuremath{\curlyFunc{\calF}{#1}}}
+\newcommand*{\InvFourier}[1]{\ensuremath{\curlyFunc{\calF^{-1}}{#1}}}
