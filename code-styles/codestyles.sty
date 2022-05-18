@@ -1,0 +1,67 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{codestyles}
+
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+\RequirePackage{textcomp}
+
+\definecolor{cpp-keyword}{RGB}{197,134,192}
+\definecolor{cpp-keyword1}{HTML}{F92672}
+\definecolor{cpp-keyword2}{HTML}{569CD6}
+\definecolor{cpp-keyword3}{HTML}{F92672}
+\definecolor{cpp-keyword4}{HTML}{622CBC}
+
+\definecolor{cpp-string}{HTML}{FD971F}
+\definecolor{cpp-comment}{HTML}{008000}
+
+\lstdefinelanguage[myC]{C}%
+  {
+      keywords= [1]{break,case,continue,default,do,else,enum,extern,%
+        for,goto,if,return,sizeof,static,struct,switch,typedef,union,%
+        ,using,volatile,while}, % primary commands
+      morekeywords = [2]{auto,bool,char,double,float,int,long,short,void,}, % primitive types
+      morekeywords = [3]{const,signed,unsigned,}, % type related
+      morekeywords = [4]{main,printf,}, % functions
+   sensitive = true,%
+   morecomment=[s]{/*}{*/},%
+   morecomment=[l]//,% nonstandard
+   morestring=[b]",%
+   morestring=[b]',%
+   moredelim=*[directive]\#,%
+   moredirectives={define,elif,else,endif,error,if,ifdef,ifndef,line,%
+      include,pragma,undef,warning}%
+  }[keywords,comments,strings,directives]%
+
+\lstdefinestyle{cpp-code}{
+    language = {[myC] C},
+    basicstyle=\normalsize\ttfamily,
+    keywordstyle={[1]\color{cpp-keyword1}},
+    keywordstyle={[2]\color{cpp-keyword2}},
+    keywordstyle={[3]\color{cpp-keyword3}},
+    keywordstyle={[4]\color{cpp-keyword4}},
+    stringstyle=\color{cpp-string},
+    commentstyle=\color{cpp-comment},
+}
+
+
+
+
+%% Actual colors from idlelib/config-highlight.def
+%%     --> corrected to ``web-safe''
+%% strings  = #00aa00 / 0,170,0      (a darker green)
+%% builtins = #900090 / 144,0,144    (purple-ish)
+%% keywords = #FF7700 / 255,119,0    (quite close to plain `orange')
+%% Corrected to ``web-safe''
+\definecolor{purple2}{RGB}{153,0,153} % there's actually no standard purple
+\definecolor{green2}{RGB}{0,153,0} % a darker green
+
+\lstdefinestyle{python-code}{%
+	language=Python,                   % the language
+	basicstyle=\normalsize\ttfamily,   % size of the fonts for the code
+	% Color settings to match IDLE style
+	keywordstyle=\color{orange},       % core keywords
+	keywordstyle={[2]\color{purple2}}, % built-ins
+	stringstyle=\color{green2},%
+	commentstyle=\color{red},%
+	upquote=true,                      % requires textcomp
+}

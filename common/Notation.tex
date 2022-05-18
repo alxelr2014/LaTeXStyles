@@ -18,7 +18,7 @@
 \DeclarePairedDelimiter{\ket}{\lvert}{\rangle}
 \DeclarePairedDelimiterX{\braket}[2]{\langle}{\rangle}{#1 \delimsize\vert #2}
 
-
+%\ifblank{#1}{\:\cdot\:}{#1}
 \NewDocumentCommand{\DeclareTripledDelimiter}{O{*}mmmmm}{%
 	\makeatletter
 	\ifcsname @tempDelim \endcsname%

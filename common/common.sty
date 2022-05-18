@@ -4,6 +4,8 @@
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{mathtools}
+\RequirePackage{mathrsfs}
+
 %\RequirePackage{bbold}
 \RequirePackage{xparse}
 
@@ -14,6 +16,7 @@
 \input{Notation.tex}
 \input{Cryptography.tex}
 \input{Probability.tex}
+\input{Algebra.tex}
 
 \newcommand{\definedAs}{\ensuremath{:=}}
 
@@ -23,6 +26,7 @@
 \DeclareMathOperator{\diam}{diam}
 \DeclareMathOperator{\interior}{int}
 \DeclareMathOperator{\closure}{cl}
+\DeclareMathOperator{\boundary}{bdry}
 \DeclareMathOperator*{\vspan}{span}
 \DeclareMathOperator*{\Image}{Im}
 \DeclareMathOperator*{\id}{id}
@@ -42,24 +46,18 @@
 \newcommand*{\Integers}{\ensuremath{\mathbb{Z}}}
 \newcommand*{\Complex}{\ensuremath{\mathbb{C}}}
 \newcommand*{\TimeDomain}{\bbT}
-
+\newcommand{\powerSet}[1]{\ensuremath{\func{\scrP}{#1}}}
 
 
 %algebra
-\newcommand*{\Field}{\ensuremath{\mathbb{F}}}
-\newcommand*{\DSZero}{\ensuremath{\mathbb{0}}}
-\newcommand*{\DSOne}{\ensuremath{\mathbb{1}}}
-\newcommand*{\FieldPolynomial}[2][K]{\ensuremath{\squareFunc{#1}{#2}}}
-\newcommand*{\FieldFormalSeries}[2][K]{\ensuremath{#1 \! \left[ \left[ #2 \right] \right] }}
+
 
 
 %analysis
 \newcommand*{\metricSpace}[2]{\ensuremath{\left(#1,#2\right)}}
 \newcommand*{\normedSpace}[2]{\ensuremath{\left(#1,#2\right)}}
-\newcommand*{\CalB}{\ensuremath{\mathcal{B}}}
-\newcommand*{\CalL}{\ensuremath{\mathcal{L}}}
-\newcommand*{\CalC}{\ensuremath{\mathcal{C}}}
-\DeclareMathOperator*{\GL}{GL}
+
+
 \makeatletter
 \DeclareMathOperator*{\@DiffOperator}{D}
 \DeclareMathOperator*{\@diffOperator}{d}
@@ -93,6 +91,9 @@
 \DeclareMathOperator*{\eigenSpace}{eigenspace}
 \DeclareMathOperator*{\algmult}{algmult}
 \DeclareMathOperator*{\trace}{tr}
+
+\DeclareMathOperator*{\accept}{accept}
+\DeclareMathOperator*{\start}{start}
 
 	
 
