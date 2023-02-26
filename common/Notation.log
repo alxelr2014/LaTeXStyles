@@ -1,0 +1,690 @@
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.10.27)  13 FEB 2023 19:40
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Notation.tex
+(./Notation.tex
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-09-28>
+! Undefined control sequence.
+l.2 \DeclarePairedDelimiterX
+                            {\clcl}[2]{[}{]}{#1 , #2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.2 \DeclarePairedDelimiterX{\clcl
+                                  }[2]{[}{]}{#1 , #2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \DeclarePairedDelimiterX{\clcl}[
+                                    2]{[}{]}{#1 , #2}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ ("5B) in font nullfont!
+Missing character: There is no 2 ("32) in font nullfont!
+Missing character: There is no ] ("5D) in font nullfont!
+Missing character: There is no [ ("5B) in font nullfont!
+Missing character: There is no ] ("5D) in font nullfont!
+! You can't use `macro parameter character #' in horizontal mode.
+l.2 \DeclarePairedDelimiterX{\clcl}[2]{[}{]}{#
+                                              1 , #2}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no 1 ("31) in font nullfont!
+Missing character: There is no , ("2C) in font nullfont!
+! You can't use `macro parameter character #' in horizontal mode.
+l.2 ...larePairedDelimiterX{\clcl}[2]{[}{]}{#1 , #
+                                                  2}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no 2 ("32) in font nullfont!
+! Undefined control sequence.
+l.3 \DeclarePairedDelimiterX
+                            {\clop}[2]{[}{[}{#1 , #2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.3 \DeclarePairedDelimiterX{\clop
+                                  }[2]{[}{[}{#1 , #2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ ("5B) in font nullfont!
+Missing character: There is no 2 ("32) in font nullfont!
+Missing character: There is no ] ("5D) in font nullfont!
+Missing character: There is no [ ("5B) in font nullfont!
+Missing character: There is no [ ("5B) in font nullfont!
+! You can't use `macro parameter character #' in horizontal mode.
+l.3 \DeclarePairedDelimiterX{\clop}[2]{[}{[}{#
+                                              1 , #2}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no 1 ("31) in font nullfont!
+Missing character: There is no , ("2C) in font nullfont!
+! You can't use `macro parameter character #' in horizontal mode.
+l.3 ...larePairedDelimiterX{\clop}[2]{[}{[}{#1 , #
+                                                  2}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no 2 ("32) in font nullfont!
+! Undefined control sequence.
+l.4 \DeclarePairedDelimiterX
+                            {\opcl}[2]{]}{]}{#1 , #2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.4 \DeclarePairedDelimiterX{\opcl
+                                  }[2]{]}{]}{#1 , #2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ ("5B) in font nullfont!
+Missing character: There is no 2 ("32) in font nullfont!
+Missing character: There is no ] ("5D) in font nullfont!
+Missing character: There is no ] ("5D) in font nullfont!
+Missing character: There is no ] ("5D) in font nullfont!
+! You can't use `macro parameter character #' in horizontal mode.
+l.4 \DeclarePairedDelimiterX{\opcl}[2]{]}{]}{#
+                                              1 , #2}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no 1 ("31) in font nullfont!
+Missing character: There is no , ("2C) in font nullfont!
+! You can't use `macro parameter character #' in horizontal mode.
+l.4 ...larePairedDelimiterX{\opcl}[2]{]}{]}{#1 , #
+                                                  2}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no 2 ("32) in font nullfont!
+! Undefined control sequence.
+l.5 \DeclarePairedDelimiterX
+                            {\opop}[2]{]}{[}{#1 , #2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.5 \DeclarePairedDelimiterX{\opop
+                                  }[2]{]}{[}{#1 , #2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ ("5B) in font nullfont!
+Missing character: There is no 2 ("32) in font nullfont!
+Missing character: There is no ] ("5D) in font nullfont!
+Missing character: There is no ] ("5D) in font nullfont!
+Missing character: There is no [ ("5B) in font nullfont!
+! You can't use `macro parameter character #' in horizontal mode.
+l.5 \DeclarePairedDelimiterX{\opop}[2]{]}{[}{#
+                                              1 , #2}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no 1 ("31) in font nullfont!
+Missing character: There is no , ("2C) in font nullfont!
+! You can't use `macro parameter character #' in horizontal mode.
+l.5 ...larePairedDelimiterX{\opop}[2]{]}{[}{#1 , #
+                                                  2}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no 2 ("32) in font nullfont!
+! Undefined control sequence.
+l.6 \DeclarePairedDelimiterX
+                            {\curlyclcl}[2]{\{ }{ \}}{#1 , #2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.6 \DeclarePairedDelimiterX{\curlyclcl
+                                       }[2]{\{ }{ \}}{#1 , #2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ ("5B) in font nullfont!
+Missing character: There is no 2 ("32) in font nullfont!
+Missing character: There is no ] ("5D) in font nullfont!
+LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 6
+.
+(c:/texlive/2022/texmf-dist/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+6.
+
+(c:/texlive/2022/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 6.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.6 ...PairedDelimiterX{\curlyclcl}[2]{\{ }{ \}}{#
+                                                  1 , #2}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no 1 ("31) in font nullfont!
+Missing character: There is no , ("2C) in font nullfont!
+! You can't use `macro parameter character #' in horizontal mode.
+l.6 ...dDelimiterX{\curlyclcl}[2]{\{ }{ \}}{#1 , #
+                                                  2}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no 2 ("32) in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2--7
+[]
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 2--7
+\OMS/lmsy/m/n/10 f
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 2--7
+\OMS/lmsy/m/n/10 g
+ []
+
+! Undefined control sequence.
+l.9 \DeclarePairedDelimiter
+                           {\vertp}{\lvert}{\rvert}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.9 \DeclarePairedDelimiter{\vertp
+                                  }{\lvert}{\rvert}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.9 \DeclarePairedDelimiter{\vertp}{\lvert
+                                          }{\rvert}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.9 \DeclarePairedDelimiter{\vertp}{\lvert}{\rvert
+                                                  }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.10 \DeclarePairedDelimiter
+                            {\Vertp}{\lVert}{\rVert}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.10 \DeclarePairedDelimiter{\Vertp
+                                   }{\lVert}{\rVert}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.10 \DeclarePairedDelimiter{\Vertp}{\lVert
+                                           }{\rVert}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.10 ...larePairedDelimiter{\Vertp}{\lVert}{\rVert
+                                                  }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.11 \DeclarePairedDelimiter
+                            {\floorp}{\lfloor}{\rfloor}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.11 \DeclarePairedDelimiter{\floorp
+                                    }{\lfloor}{\rfloor}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.11 \DeclarePairedDelimiter{\floorp}{\lfloor
+                                             }{\rfloor}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \DeclarePairedDelimiter{\floorp}{\lfloor
+                                             }{\rfloor}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 11.
+! Extra }, or forgotten $.
+l.11 \DeclarePairedDelimiter{\floorp}{\lfloor}
+                                              {\rfloor}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+l.12 \DeclarePairedDelimiter
+                            {\ceilp}{\lceil}{\rceil}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.12 \DeclarePairedDelimiter{\ceilp
+                                   }{\lceil}{\rceil}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.13 \DeclarePairedDelimiter
+                            {\roundp}{\lfloor}{\rceil}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.13 \DeclarePairedDelimiter{\roundp
+                                    }{\lfloor}{\rceil}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.14 \DeclarePairedDelimiter
+                            {\anglep}{\langle}{\rangle}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.14 \DeclarePairedDelimiter{\anglep
+                                    }{\langle}{\rangle}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.15 \DeclarePairedDelimiter
+                            {\bracketp}{(}{)}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.15 \DeclarePairedDelimiter{\bracketp
+                                      }{(}{)}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.16 \DeclarePairedDelimiter
+                            {\curlyp}{\{}{\}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.16 \DeclarePairedDelimiter{\curlyp
+                                    }{\{}{\}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.17 \DeclarePairedDelimiter
+                            {\squarep}{[}{]}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.17 \DeclarePairedDelimiter{\squarep
+                                     }{[}{]}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.18 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (77.77786pt too wide) in paragraph at lines 11--18
+[]$\OMS/cmsy/m/n/10 b[][][][][][][][][][][][][][][][][][][]$ 
+ []
+
+! Undefined control sequence.
+l.19 \DeclarePairedDelimiter
+                            {\bra}{\langle}{\rvert}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.19 \DeclarePairedDelimiter{\bra
+                                 }{\langle}{\rvert}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.19 \DeclarePairedDelimiter{\bra}{\langle
+                                          }{\rvert}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 \DeclarePairedDelimiter{\bra}{\langle
+                                          }{\rvert}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Extra }, or forgotten $.
+l.19 \DeclarePairedDelimiter{\bra}{\langle}
+                                           {\rvert}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+l.19 \DeclarePairedDelimiter{\bra}{\langle}{\rvert
+                                                  }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.20 \DeclarePairedDelimiter
+                            {\ket}{\lvert}{\rangle}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.20 \DeclarePairedDelimiter{\ket
+                                 }{\lvert}{\rangle}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.20 \DeclarePairedDelimiter{\ket}{\lvert
+                                         }{\rangle}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.21 \DeclarePairedDelimiterX
+                             {\braket}[2]{\langle}{\rangle}{#1 \delimsize\ve...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.21 \DeclarePairedDelimiterX{\braket
+                                     }[2]{\langle}{\rangle}{#1 \delimsize\ve...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in math mode.
+l.21 ...DelimiterX{\braket}[2]{\langle}{\rangle}{#
+                                                  1 \delimsize\vert #2}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.21 ...braket}[2]{\langle}{\rangle}{#1 \delimsize
+                                                  \vert #2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in math mode.
+l.21 ...[2]{\langle}{\rangle}{#1 \delimsize\vert #
+                                                  2}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.22 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (58.889pt too wide) in paragraph at lines 19--22
+[]$\OMS/cmsy/m/n/10 h[][][][][]\OT1/cmr/m/n/10 [2][][][]$ 
+ []
+
+! Undefined control sequence.
+l.98 \DeclareMathOperator
+                         *{\residue}{Res}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.98 \DeclareMathOperator*
+                          {\residue}{Res}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no * ("2A) in font nullfont!
+! Undefined control sequence.
+l.98 \DeclareMathOperator*{\residue
+                                   }{Res}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no R ("52) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+)
+! Emergency stop.
+<*> Notation.tex
+                
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 102 strings out of 475744
+ 1503 string characters out of 5802617
+ 334016 words of memory out of 5000000
+ 21383 multiletter control sequences out of 15000+600000
+ 469562 words of font info for 29 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 26i,2n,28p,163b,131s stack positions out of 10000i,1000n,20000p,200000b,200000s
+No pages of output.

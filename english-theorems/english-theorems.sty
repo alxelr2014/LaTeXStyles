@@ -66,6 +66,8 @@
 \renewtheorem{proof}{Proof}
 \theoremsymbol{{\ensuremath{\square}}}
 \newtheorem{prooflemma}{Proof}
+\theoremsymbol{{\ensuremath{\triangleright}}}
+\newtheorem{solution}{Solution}
 
 
 \theoremseparator{.}
@@ -87,123 +89,13 @@
 \Crefname{equation}{Equation}{Equations}
 
 
+\newenvironment{exercise}
+{
+    \ \newline
+    {\Large{\textbf{Exercises}}}
+    \begin{enumerate}
+}{\end{enumerate}}
+
 \newlist{problem}{enumerate}{2}
 \setlist[problem,1]{wide,labelindent= 2mm, label={\textbf{ Problem \arabic*.}}}
 \setlist[problem,2]{wide,labelindent = \parindent , label={\alph*)}}
-
-
-
-%\newtheorem{otheorem}{Theorem}
-%\newtheorem{oexample}{Example}
-%\makeatletter%
-%\@ifclassloaded{article}%
-%{
-%	
-%	\renewtheorem{otheorem}{Theorem}
-%	
-%	\renewtheorem{oexample}{Example}
-%}%
-%{
-%	\@ifclassloaded{book}
-%	{
-%		\renewtheorem{otheorem}{Theorem}[chapter]
-%		\renewtheorem{oexample}{Example}[chapter]
-%	}
-%	{
-%		\renewtheorem{otheorem}{Theorem}	
-%		\renewtheorem{oexample}{Example}
-%	}
-%}%
-%\makeatother%
-%
-%
-%%\theoremseparator{.}
-%%\theoremsymbol{}
-%%\theorembodyfont{\itshape}
-%%\theoremheaderfont{\normalfont\bfseries}
-%%\theoremstyle{plain}
-%\theoremstyle{plain}
-%\newtheorem{theorem}[otheorem]{Theorem}
-%\newtheorem{corollary}[otheorem]{Corollary}
-%\newtheorem{lemma}[otheorem]{Lemma}
-%\newtheorem{proposition}[otheorem]{Proposition}
-%
-%
-%%\theoremseparator{.}
-%%\theoremsymbol{}
-%%\theorembodyfont{\upshape}
-%%\theoremheaderfont{\normalfont\bfseries}
-%%\theoremstyle{plain}
-%\theoremstyle{remark}
-%\newtheorem{remark}{Remark}
-%\newtheorem{example}[oexample]{Example}
-%
-%%\theoremseparator{:}
-%%\theoremsymbol{}
-%%\theorembodyfont{\upshape}
-%%\theoremheaderfont{\normalfont\bfseries}
-%%\theoremstyle{nonumberplain}
-%\theoremstyle{definition}
-%\newtheorem{definition}{Definition}
-%\newtheorem{note}{Note}
-%
-%%\theoremseparator{.}
-%%\theoremsymbol{{\ensuremath{\blacksquare}}}
-%%\theorembodyfont{\upshape}
-%%\theoremheaderfont{\itshape}
-%%\theoremstyle{nonumberplain}
-%%\newtheorem{proof}{Proof}
-%%\theoremsymbol{{\ensuremath{\square}}}
-%\newtheorem{prooflemma}{Proof}
-%
-%
-%\DeclareOption{persian}{
-%	
-%	\theoremseparator{.}
-%	\theoremsymbol{}
-%	\theorembodyfont{\itshape}
-%	\theoremheaderfont{\normalfont\bfseries}
-%	\theoremstyle{plain}
-%	\renewtheorem{theorem}{قضیه}[otheorem]
-%	\renewtheorem{corollary}[otheorem]{نتیجه}
-%	\renewtheorem{lemma}[otheorem]{لم}
-%	\renewtheorem{proposition}[otheorem]{گزاره}
-%	
-%	
-%	\theoremseparator{.}
-%	\theoremsymbol{}
-%	\theorembodyfont{\upshape}
-%	\theoremheaderfont{\normalfont\bfseries}
-%	\theoremstyle{plain}
-%	\renewtheorem{remark}{ملاحضه}
-%	\renewtheorem{example}[oexample]{مثال}
-%	
-%	\theoremseparator{:}
-%	\theoremsymbol{}
-%	\theorembodyfont{\upshape}
-%	\theoremheaderfont{\normalfont\bfseries}
-%	\theoremstyle{nonumberplain}
-%	\renewtheorem{definition}{تعریف}
-%	\renewtheorem{note}{یادداشت}
-%	
-%	\theoremseparator{.}
-%	\theoremsymbol{{\ensuremath{\blacksquare}}}
-%	\theorembodyfont{\upshape}
-%	\theoremheaderfont{\itshape}
-%	\theoremstyle{nonumberplain}
-%	\renewtheorem{proof}{برهان}
-%	\theoremsymbol{{\ensuremath{\square}}}
-%	\renewtheorem{prooflemma}{برهان}
-%}
-%\DeclareOption*{\PackageWarning{theorems}{Unknown ‘\CurrentOption’}}
-%\ProcessOptions\relax
-
-%\let\itemorig\item    % Create a copy of the original \item
-%
-%\makeatletter
-%\def\myitem{%
-%	\@ifnextchar[ \@myitem{\@noitemargtrue\@myitem[\@itemlabel]}}
-%\def\@myitem[#1]{\itemorig[#1]\mbox{}\par}
-%\makeatother
-
-

@@ -3,12 +3,14 @@
 \DeclarePairedDelimiterX{\clop}[2]{[}{[}{#1 , #2}
 \DeclarePairedDelimiterX{\opcl}[2]{]}{]}{#1 , #2}
 \DeclarePairedDelimiterX{\opop}[2]{]}{[}{#1 , #2}
+\DeclarePairedDelimiterX{\curlyclcl}[2]{\{ }{ \}}{#1 , #2}
 
 %pairs
 \DeclarePairedDelimiter{\vertp}{\lvert}{\rvert}
 \DeclarePairedDelimiter{\Vertp}{\lVert}{\rVert}
 \DeclarePairedDelimiter{\floorp}{\lfloor}{\rfloor}
 \DeclarePairedDelimiter{\ceilp}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\roundp}{\lfloor}{\rceil}
 \DeclarePairedDelimiter{\anglep}{\langle}{\rangle}
 \DeclarePairedDelimiter{\bracketp}{(}{)}
 \DeclarePairedDelimiter{\curlyp}{\{}{\}}
@@ -42,6 +44,9 @@
 }
 \NewDocumentCommand{\ceil}{O{*}m}{%
 	\expandafter \csname ceilp \endcsname #1{#2}
+}
+\NewDocumentCommand{\round}{O{*}m}{%
+	\expandafter \csname roundp \endcsname #1{#2}
 }
 \NewDocumentCommand{\angleBracket}{O{*}m}{%
 	\expandafter \csname anglep \endcsname #1{#2}
