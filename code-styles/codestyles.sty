@@ -56,6 +56,7 @@
 \definecolor{purple2}{RGB}{153,0,153} % there's actually no standard purple
 \definecolor{green2}{RGB}{0,153,0} % a darker green
 
+
 \lstdefinestyle{python-code}{%
 	language=Python,                   % the language
 	basicstyle=\normalsize\ttfamily,   % size of the fonts for the code
@@ -65,4 +66,42 @@
 	stringstyle=\color{green2},%
 	commentstyle=\color{red},%
 	upquote=true,                      % requires textcomp
+  showstringspaces=false,
+  breaklines=true,
 }
+
+
+\definecolor{vgreen}{RGB}{104,180,104}
+\definecolor{vblue}{RGB}{49,49,255}
+\definecolor{vorange}{RGB}{255,143,102}
+
+\lstdefinestyle{verilog-style}
+{
+	language=Verilog,
+	basicstyle=\small\ttfamily,
+	keywordstyle=\color{vblue},
+	identifierstyle=\color{black},
+	commentstyle=\color{vgreen},
+	numbers=left,
+	numberstyle=\tiny\color{black},
+	numbersep=10pt,
+	tabsize=8,
+	moredelim=*[s][\colorIndex]{[}{]},
+	breaklines=true,
+	literate=*{:}{:}1
+}
+
+\makeatletter
+\newcommand*\@lbracket{[}
+\newcommand*\@rbracket{]}
+\newcommand*\@colon{:}
+\newcommand*\colorIndex{%
+	\edef\@temp{\the\lst@token}%
+	\ifx\@temp\@lbracket \color{black}%
+	\else\ifx\@temp\@rbracket \color{black}%
+	\else\ifx\@temp\@colon \color{black}%
+	\else \color{vorange}%
+	\fi\fi\fi
+}
+\makeatother
+

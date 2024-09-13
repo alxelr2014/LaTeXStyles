@@ -2,13 +2,15 @@
 \ProvidesPackage{common}
 
 \RequirePackage{amsmath}
-\RequirePackage{amssymb}
 \RequirePackage{mathtools}
-\RequirePackage{mathrsfs}
-\RequirePackage{bm}
-
+%\RequirePackage{mathrsfs}
+\RequirePackage{tikz}
+\usetikzlibrary{decorations,arrows,positioning, automata}
+\tikzset{every picture/.style={->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+		scale =1 ,transform shape}}
 %\RequirePackage{bbold}
 \RequirePackage{xparse}
+\RequirePackage{bm}
 
 
 
@@ -55,6 +57,7 @@
 
 %algebra
 
+\newcommand{\bsub}[1]{\ensuremath{{\phantom{}}_{#1}}}
 
 
 %analysis
@@ -130,4 +133,5 @@
 \newcommand{\commutator}[2]{\ensuremath{\clcl{#1}{#2}}}
 \newcommand{\anticommutator}[2]{\ensuremath{\curlyclcl{#1}{#2}}}
 \newcommand{\vectar}[1]{\ensuremath{\overrightarrow{#1}}}
-\newcommand{\vectbf}[1]{\ensuremath{\boldsymbol{#1}}}
+\DeclareRobustCommand{\vectbf}[1]{\ensuremath{\bm{#1}}}
+\newcommand{\conj}[1]{\ensuremath{{#1^{\ast}}}}

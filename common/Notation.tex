@@ -16,9 +16,9 @@
 \DeclarePairedDelimiter{\curlyp}{\{}{\}}
 \DeclarePairedDelimiter{\squarep}{[}{]}
 
-\DeclarePairedDelimiter{\bra}{\langle}{\rvert}
-\DeclarePairedDelimiter{\ket}{\lvert}{\rangle}
-\DeclarePairedDelimiterX{\braket}[2]{\langle}{\rangle}{#1 \delimsize\vert #2}
+\DeclarePairedDelimiter{\brap}{\langle}{\rvert}
+\DeclarePairedDelimiter{\ketp}{\lvert}{\rangle}
+\DeclarePairedDelimiterX{\braketp}[2]{\langle}{\rangle}{#1 \delimsize\vert #2}
 
 %\ifblank{#1}{\:\cdot\:}{#1}
 \NewDocumentCommand{\DeclareTripledDelimiter}{O{*}mmmmm}{%
@@ -31,8 +31,15 @@
 	\expandafter \csname @tempDelim \endcsname #1{#5}{#6}
 	\makeatother	
 }
-
-
+\NewDocumentCommand{\ket}{O{*}m}{%
+	\expandafter \csname ketp \endcsname #1{#2}
+}
+\NewDocumentCommand{\bra}{O{*}m}{%
+	\expandafter \csname brap \endcsname #1{#2}
+}
+\NewDocumentCommand{\braket}{O{*}mm}{%
+	\expandafter \csname braketp \endcsname #1{#2}{#3}
+}
 \NewDocumentCommand{\abs}{O{*}m}{%
 	\expandafter \csname vertp \endcsname #1{#2}
 }
