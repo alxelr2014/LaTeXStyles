@@ -8,7 +8,6 @@
 \usetikzlibrary{decorations,arrows,positioning, automata}
 \tikzset{every picture/.style={->,>=stealth',shorten >=1pt,auto,node distance=3cm,
 		scale =1 ,transform shape}}
-%\RequirePackage{bbold}
 \RequirePackage{xparse}
 \RequirePackage{bm}
 \RequirePackage{mathrsfs}
@@ -26,7 +25,6 @@
 \newcommand{\definedAs}{\ensuremath{:=}}
 
 
-\DeclareMathOperator*{\Res}{Res}
 
 %operators
 \DeclareMathOperator{\diam}{diam}
@@ -80,6 +78,7 @@
 \DeclareMathOperator*{\argmin}{argmin}
 
 \DeclareMathOperator*{\vol}{vol}
+\DeclareMathOperator*{\Res}{Res}
 
 %linear algebra
 \newcommand*{\Matrices}[3][\Field]{\ensuremath{\func{\mathcal{M}_{#2 \times #3}}{#1}}}
@@ -100,9 +99,6 @@
 \DeclareMathOperator*{\eigenSpace}{eigenspace}
 \DeclareMathOperator*{\algmult}{algmult}
 \DeclareMathOperator{\trace}{tr}
-
-\DeclareMathOperator*{\accept}{accept}
-\DeclareMathOperator*{\start}{start}
 
 	
 
