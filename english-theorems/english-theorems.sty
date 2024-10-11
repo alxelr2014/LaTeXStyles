@@ -1,22 +1,22 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{english-theorems}
 \RequirePackage{amsmath}
-\RequirePackage[standard,thmmarks,amsmath]{ntheorem}
-\RequirePackage{hyperref}
+\RequirePackage[thmmarks,amsmath]{ntheorem}
+\RequirePackage[colorlinks]{hyperref}
+\RequirePackage[nameinlink]{cleveref}
 \RequirePackage{enumitem}
 	
 
-%TODO: add referencing
 \newtheorem{otheorem}{Theorem}
 \newtheorem{oexample}{Example}
-\makeatletter%
-\@ifclassloaded{article}%
+\makeatletter
+\@ifclassloaded{article}
 {
     
     \renewtheorem{otheorem}{Theorem}
     
     \renewtheorem{oexample}{Example}
-}%
+}
 {
     \@ifclassloaded{book}
     {
@@ -27,8 +27,8 @@
         \renewtheorem{otheorem}{Theorem}	
         \renewtheorem{oexample}{Example}
     }
-}%
-\makeatother%
+}
+\makeatother
 
 
 \theoremseparator{.}
@@ -36,10 +36,10 @@
 \theorembodyfont{\itshape}
 \theoremheaderfont{\normalfont\bfseries}
 \theoremstyle{plain}
-\renewtheorem{theorem}[otheorem]{Theorem}
-\renewtheorem{corollary}[otheorem]{Corollary}
-\renewtheorem{lemma}[otheorem]{Lemma}
-\renewtheorem{proposition}[otheorem]{Proposition}
+\newtheorem{theorem}[otheorem]{Theorem}
+\newtheorem{corollary}[otheorem]{Corollary}
+\newtheorem{lemma}[otheorem]{Lemma}
+\newtheorem{proposition}[otheorem]{Proposition}
 
 
 \theoremseparator{.}
@@ -47,15 +47,15 @@
 \theorembodyfont{\upshape}
 \theoremheaderfont{\normalfont\bfseries}
 \theoremstyle{plain}
-\renewtheorem{remark}{Remark}
-\renewtheorem{example}[oexample]{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{example}[oexample]{Example}
 
 \theoremseparator{:}
 \theoremsymbol{}
 \theorembodyfont{\upshape}
 \theoremheaderfont{\normalfont\bfseries}
 \theoremstyle{nonumberplain}
-\renewtheorem{definition}{Definition}
+\newtheorem{definition}{Definition}
 \newtheorem{note}{Note}
 
 \theoremseparator{.}
@@ -63,7 +63,7 @@
 \theorembodyfont{\upshape}
 \theoremheaderfont{\itshape}
 \theoremstyle{nonumberplain}
-\renewtheorem{proof}{Proof}
+\newtheorem{proof}{Proof}
 \theoremsymbol{{\ensuremath{\square}}}
 \newtheorem{prooflemma}{Proof}
 \theoremsymbol{{\ensuremath{\triangleright}}}
