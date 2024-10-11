@@ -99,13 +99,5 @@ footskip=0.5in]{geometry}
 	\endgroup
 }
 
-
-%Set digit math
-%\ExplSyntaxOn
-%\cs_set_eq:NN
-%\etex_iffontchar:D
-%\tex_iffontchar:D
-%\ExplSyntaxOff
-
 \endinput
 

@@ -2,8 +2,8 @@
 \ProvidesPackage{persian-theorems}
 
 
-\RequirePackage[thmmarks,amsmath,amsthm]{ntheorem}
-\RequirePackage[colorlinks]{hyperref}
+\RequirePackage[thmmarks]{ntheorem}
+\RequirePackage[colorlinks,linkcolor=magenta,citecolor=green]{hyperref}
 \RequirePackage[nameinlink]{cleveref}
 \RequirePackage{enumitem}
 
@@ -14,16 +14,6 @@
 \ProcessOptions\relax
 
 
-% \makeatletter
-% \def\th@plain{%
-% 	\thm@notefont{}% same as heading font
-% 	\itshape % body font
-% }
-% \def\th@definition{%
-% 	\thm@notefont{}% same as heading font
-% 	\normalfont % body font
-% }
-% \makeatother
 \newtheorem{otheorem}{oth}
 \newtheorem{oexample}{oex}
 
@@ -34,8 +24,8 @@
 	\renewcommand{\theoexample}{\thechapter \@SepMark\arabic{oexample}} 
 
 }{
-	\renewcommand{\theotheorem}{\@SepMark\arabic{otheorem}} 
-	\renewcommand{\theoexample}{\@SepMark\arabic{oexample}} 
+	\renewcommand{\theotheorem}{\arabic{otheorem}} 
+	\renewcommand{\theoexample}{\arabic{oexample}} 
 
 }
 \makeatother
@@ -46,12 +36,12 @@
 \theorembodyfont{\itshape}
 \theoremheaderfont{\normalfont\bfseries}
 \theoremstyle{plain}
+\theoremstyle{theorems}
 \newtheorem{theorem}[otheorem]{قضیه}
 \newtheorem{corollary}[otheorem]{پی‌آمد}
 \newtheorem{lemma}[otheorem]{لم}
 \newtheorem{proposition}[otheorem]{گزاره}
-\newtheorem{claim}{داو}
-
+\newtheorem{claim}[otheorem]{داو}
 
 
 \theoremseparator{.}
@@ -61,6 +51,8 @@
 \theoremstyle{plain}
 \newtheorem{remark}{ملاحظه}
 \newtheorem{example}[oexample]{نمونه}
+
+
 
 \theoremseparator{:}
 \theoremsymbol{}
@@ -73,12 +65,13 @@
 \newtheorem{intuition}{دریافت}
 \newtheorem{note}{نکته}
 
+
 \theoremseparator{.}
 \theoremsymbol{{\ensuremath{\blacksquare}}}
 \theorembodyfont{\upshape}
 \theoremheaderfont{\itshape}
 \theoremstyle{nonumberplain}
-\renewtheorem{proof}{برهان}
+\newtheorem{proof}{برهان}
 \theoremsymbol{{\ensuremath{\square}}}
 \newtheorem{prooflemma}{برهان}
 \theoremsymbol{{\ensuremath{\triangleright}}}
@@ -88,17 +81,34 @@
 \newcommand{\crefrangeconjunction}{\,تا\,}
 \newcommand{\crefpairconjunction}{\,و\,}
 
-\crefname{theorem}{قضیه}{قضیه‌ها}
-\crefname{example}{نمونه}{نمونه‌ها}
-\crefname{corollary}{پی‌آمد}{پی‌آمدها}
-\crefname{lemma}{لم}{لم‌ها}
-\crefname{proposition}{گزاره}{گزاره‌ها}
-\crefname{remark}{ملاحظه}{ملاحظات}
-\crefname{definition}{شناسانش}{شناسانش‌ها}
-\crefname{note}{نکته}{نکته‌ها}
-\crefname{equation}{برابری}{برابری‌ها}
-\crefname{algorithm}{الگوریتم}{الگوریتم‌ها}
+\crefname{theorem}{قضیه‌ی}{قضیه‌ها‌ی}
+\crefname{example}{نمونه‌ی}{نمونه‌ها‌ی}
+\crefname{corollary}{پی‌آمد}{پی‌آمدها‌ی}
+\crefname{lemma}{لم}{لم‌ها‌ی}
+\crefname{proposition}{گزاره‌ی}{گزاره‌ها‌ی}
+\crefname{remark}{ملاحظه‌ی}{ملاحظات}
+\crefname{definition}{شناسانش}{شناسانش‌ها‌ی}
+\crefname{note}{نکته‌ی}{نکته‌های}
+\crefname{equation}{برابری}{برابری‌های}
+\crefname{algorithm}{الگوریتم}{الگوریتم‌های}
 \crefname{section}{بخش}{بخش‌های}
+\crefname{proof}{برهان}{برهان‌های}
+
+
+\newcommand{\updatecref}[2]{
+	\expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
+   \expandafter\renewcommand\csname#1\endcsname{\crefalias{#2}{#1}
+   \csname old#1\endcsname}
+	
+}
+
+\updatecref{theorem}{otheorem}
+\updatecref{lemma}{otheorem}
+\updatecref{corollary}{otheorem}
+\updatecref{proposition}{otheorem}
+\updatecref{claim}{otheorem}
+\updatecref{remark}{oexample}
+\updatecref{example}{oexample}
 
 
 \makeatletter
