@@ -4,3 +4,22 @@
 \DeclareMathOperator{\lsub}{sub}
 \DeclareMathOperator{\lTRM}{TRM}
 \DeclareMathOperator{\lFRM}{FRM}
+\DeclareMathOperator{\lST}{ST}
+
+\makeatletter
+\newcommand{\leftrightarroweq}{\mathrel{\mathpalette\leftrightarroweq@\relax}}
+\newcommand{\leftrightarroweq@}[2]{%
+    \sbox\z@{$\m@th#1\leftrightarrow$}%
+    \raisebox{0.5\ht\z@}{\vtop{
+        \ialign{%
+            \hfil##\hfil\cr
+            \copy\z@\cr
+            \noalign{\nointerlineskip\kern1.0\ht\z@}
+            \makebox[\wd\z@][s]{$\m@th#1\relbar\hss\relbar$}\cr
+            \noalign{\kern0\ht\z@}
+        }%
+    }}%
+}
+\makeatother
+
+\newcommand*{\logClass}[1]{\ensuremath{\bm{\mathrm{#1}}}}
