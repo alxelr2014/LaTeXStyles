@@ -1,10 +1,12 @@
 \newcommand*{\Probability}{\ensuremath{\mathbb{P}}}
-\newcommand*{\prob}[1]{\ensuremath{\func{\Probability}{#1}}}
-\newcommand*{\condProb}[2] {\ensuremath{\prob{#1 \; \middle| \; #2}}}
 \newcommand*{\Expected}{\ensuremath{\mathbb{E}}}
 \DeclareMathOperator*{\Variance}{Var}
 \DeclareMathOperator*{\Covariance}{Cov}
 
+\NewDocumentCommand{\prob}{om}{%
+\IfNoValueTF{#1}
+{\ensuremath{\squareFunc{\Probability}{#2}}}
+{\ensuremath{\squareFunc{\Probability_{#1}}{#2}}}}%
 
 \NewDocumentCommand{\expected}{om}{%
 \IfNoValueTF{#1}
@@ -22,6 +24,7 @@
 {\ensuremath{\squareFunc{\Covariance_{#1}}{#2}}}}
 
 
+\newcommand*{\condProb}[3][]{\ensuremath{\prob[#1]{#2 \; \middle| \; #3}}}
 \newcommand*{\condExp}[3][]{\ensuremath{\expected[#1]{#2 \; \middle| \; #3}}}
 \newcommand*{\condCov}[3][]{\ensuremath{\covariance[#1]{#2 \; \middle| \; #3}}}
 \newcommand*{\condVar}[3][]{\ensuremath{\variance[#1]{#2 \; \middle| \; #3}}}
